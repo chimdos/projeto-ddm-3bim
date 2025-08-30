@@ -1,3 +1,17 @@
+// LEGENDA DAS IMAGENS
+/*
+emerson
+emerson rocha
+emerson livro
+emerson bota
+emerson cerveja
+emerson brocha
+emerson paçoca
+emerson nota
+emerson jota
+emerson porca
+*/
+
 import {
   Text,
   Image,
@@ -52,9 +66,9 @@ const BotaoNeumorfico = ({ onPress, titulo }) => {
   );
 };
 
-const CartaoNeumorfico = ({ children }) => {
+const CardNeumorfico = ({ children }) => {
   return (
-    <View style={[estilos.containerNeumorfico, estilos.cartao]}>
+    <View style={[estilos.containerNeumorfico, estilos.card]}>
       <View style={[estilos.sombraInferior, { borderRadius: 25 }]} />
       <View style={[estilos.sombraSuperior, { borderRadius: 25 }]} />
       {children}
@@ -102,9 +116,9 @@ export default function Aplicativo() {
         {mensagemErro && <Text style={estilos.textoDeErro}>{mensagemErro}</Text>}
 
         {imagem && (
-          <CartaoNeumorfico>
+          <CardNeumorfico>
             <Image source={imagem} style={estilos.estiloDaImagem} />
-          </CartaoNeumorfico>
+          </CardNeumorfico>
         )}
 
         <BotaoNeumorfico titulo="Exibir Imagem" onPress={exibirImagem} />
@@ -132,7 +146,7 @@ const estilos = StyleSheet.create({
     color: '#6d6d6d',
     marginBottom: 30,
     textShadowColor: 'rgba(255, 255, 255, 0.9)',
-    textShadowOffset: {width: -1, height: 1},
+    textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 1
   },
   textoDeErro: {
@@ -163,7 +177,7 @@ const estilos = StyleSheet.create({
     borderRadius: 15,
     marginTop: 20,
   },
-  cartao: {
+  card: {
     width: 250,
     height: 250,
     borderRadius: 25,
@@ -205,7 +219,7 @@ const estilos = StyleSheet.create({
     fontWeight: '600',
     color: '#ffffff',
     textShadowColor: 'rgba(0, 0, 0, 0.2)',
-    textShadowOffset: {width: 1, height: 1},
+    textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 2
   },
   sombraSuperiorVerde: {
